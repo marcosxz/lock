@@ -9,7 +9,7 @@ import (
 func TestNewRedisLock(t *testing.T) {
 
 	conn := redis.NewUniversalClient(&redis.UniversalOptions{
-		Addrs:    nil,
+		Addrs:    []string{"127.0.0.1:6379"},
 		DB:       0,
 		Password: "",
 	})
